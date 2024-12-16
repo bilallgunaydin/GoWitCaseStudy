@@ -1,0 +1,140 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="PetStore Test Suite">
+        <test name="Creating New Pet Test">
+            <parameter name="id" value="1"/>
+            <parameter name="categoryId" value="2"/>
+            <parameter name="categoryName" value="Dog"/>
+            <parameter name="name" value="Buddy"/>
+            <parameter name="photoUrl" value="https://example.com/photo1.jpg"/>
+            <parameter name="tagId" value="101"/>
+            <parameter name="tagName" value="cute"/>
+            <parameter name="status" value="available"/>
+            <classes>
+                <class name="Tests.HappyPathCases.HappyPathTests">
+                    <methods>
+                        <include name="createPet"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Updating Pet Test">
+            <parameter name="id" value="2"/>
+            <parameter name="categoryId" value="3"/>
+            <parameter name="categoryName" value="mouse"/>
+            <parameter name="name" value="Ted"/>
+            <parameter name="photoUrl" value="https://example.com/photo1.jpg"/>
+            <parameter name="tagId" value="101"/>
+            <parameter name="tagName" value="small"/>
+            <parameter name="status" value="available"/>
+            <classes>
+                <class name="Tests.HappyPathCases.HappyPathTests">
+                    <methods>
+                        <include name="updatePet"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Getting A Pet Test">
+            <parameter name="id" value="2"/>
+            <classes>
+                <class name="Tests.HappyPathCases.HappyPathTests">
+                    <methods>
+                        <include name="getPet"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Getting Pet List By Status Tests">
+            <classes>
+                <class name="Tests.HappyPathCases.HappyPathTests">
+                    <methods>
+                        <include name="getPetList"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Deleting A Pet Test">
+            <parameter name="id" value="1"/>
+            <classes>
+                <class name="Tests.HappyPathCases.HappyPathTests">
+                    <methods>
+                        <include name="deletePet"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Getting Pets By Status">
+            <parameter name="status" value="available,pending,sold"/>
+            <classes>
+                <class name="Tests.HappyPathCases.HappyPathTests">
+                    <methods>
+                        <include name="getPetListByStatus"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Not Creating New Pet Test">
+            <parameter name="id" value="-1"/>
+            <parameter name="categoryId" value="-1"/>
+            <parameter name="categoryName" value=""/>
+            <parameter name="name" value=""/>
+            <parameter name="photoUrl" value=""/>
+            <parameter name="tagId" value="-1"/>
+            <parameter name="tagName" value=""/>
+            <parameter name="status" value=""/>
+            <classes>
+                <class name="Tests.NegativeCase.negativeCasesTests">
+                    <methods>
+                        <include name="createPetNegativeScenario"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Getting A Pet That Doesn't Exist Test">
+            <parameter name="id" value="12312456"/>
+            <classes>
+                <class name="Tests.NegativeCase.negativeCasesTests">
+                    <methods>
+                        <include name="getPetNegativeScenario"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Not Updating New Pet Test">
+            <parameter name="id" value="-1"/>
+            <parameter name="categoryId" value="-1"/>
+            <parameter name="categoryName" value=""/>
+            <parameter name="name" value=""/>
+            <parameter name="photoUrl" value=""/>
+            <parameter name="tagId" value="-1"/>
+            <parameter name="tagName" value=""/>
+            <parameter name="status" value="asd"/>
+            <classes>
+                <class name="Tests.NegativeCase.negativeCasesTests">
+                    <methods>
+                        <include name="UpdatePetNegativeScenario"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Getting Not Exists Pets By Status">
+            <parameter name="status" value="deneme,deneme2,denemee3"/>
+            <classes>
+                <class name="Tests.NegativeCase.negativeCasesTests">
+                    <methods>
+                        <include name="getPetListByStatusNotExists"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+        <test name="Deleting A Pet That Doesn't Exist Test">
+            <parameter name="id" value="12312456"/>
+            <classes>
+                <class name="Tests.NegativeCase.negativeCasesTests">
+                    <methods>
+                        <include name="deletePetNotExists"/>
+                    </methods>
+                </class>
+            </classes>
+        </test>
+</suite>
