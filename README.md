@@ -22,7 +22,7 @@ I made 1 API test cases according to the following scenarios at https://petstore
 
 ![GSON](https://user-images.githubusercontent.com/21973124/221035561-e79250d1-92e3-4ed8-8ec4-ed69f54e8dae.png) **GSON**: Gson is an open source library in the Java language and was designed to facilitate the use of the JSON (JavaScript Object Notation) data format. This library automatically converts JSON data to Java objects (deserialize) and converts Java objects to JSON data (serialize).
 
-![Allure Report](https://github.com/user-attachments/assets/57adca31-aa16-43ec-bff8-74d678fec2d9) **Allure Report**: Allure Report is an open-source framework designed to create test execution reports that are clear, concise, and attractive. It provides a visual and user-friendly interface that allows developers and testers to obtain detailed insights into what is happening in their tests.
+![Allure Report]([https://github.com/user-attachments/assets/57adca31-aa16-43ec-bff8-74d678fec2d9](https://www.google.com.tr/imgres?q=allure%20report%20logo.png&imgurl=https%3A%2F%2Fs3.eu-west-1.amazonaws.com%2Fmatrix.assets%2Fcbnapp7fuq7flsqwoc9gn8hpo7ql&imgrefurl=https%3A%2F%2Fwww.ministryoftesting.com%2Fcompanies%2Fallure-report&docid=Hyl3fEhGQDRhJM&tbnid=eNHH003h4oIRYM&vet=12ahUKEwic1fmr86yKAxVvSvEDHShqEokQM3oECBAQAA..i&w=1920&h=1080&hcb=2&ved=2ahUKEwic1fmr86yKAxVvSvEDHShqEokQM3oECBAQAA)) **Allure Report**: Allure Report is an open-source framework designed to create test execution reports that are clear, concise, and attractive. It provides a visual and user-friendly interface that allows developers and testers to obtain detailed insights into what is happening in their tests.
 
 ![Lombok](https://user-images.githubusercontent.com/21973124/221037920-d9e28e2c-ff9c-4de1-aad2-83859aefc20a.png) **Lombok**: Lombok is an open source library in the Java language and was designed to increase regularity and readability in your Java code. This library aims to reduce the duplication of code blocks during the creation of Java objects, which often degrades readability.
 
@@ -56,7 +56,7 @@ Clone the project
 ```
 ![results report](https://github.com/user-attachments/assets/e49f6705-f85f-47c1-bb33-5c17529631ed)
 
-**Not:** If the allure results file is not created in the target, it is created in the main directory. This is because maven and lombok are not fully compatible. If allure result is not in the target, manually drop the Allure Result folder into the target file after Run. Then write the "mvn allure:serve" code in Terminal and run it. The test results will open in your browser as html with Allure reports.
+⚠️ **Not:** If the allure results file is not created in the target, it is created in the main directory. This is because maven and lombok are not fully compatible. If allure result is not in the target, manually drop the Allure Result folder into the target file after Run. Then write the "mvn allure:serve" code in Terminal and run it. The test results will open in your browser as html with Allure reports.
 
 ## ![pngtree-positive-feedback-line-i](https://user-images.githubusercontent.com/21973124/198895901-dee46283-e1cf-48e0-8fe6-af2d6cfe41c7.jpg) Feedback
 
